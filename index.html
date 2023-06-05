@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daanish Mohammed Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-page {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('assets/imgs/background.jpg');
+      background-size: cover;
+      color: #fff;
+    }
+
+    .profile-picture {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px 20px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .tab:hover {
+      border-bottom-color: #fff;
+    }
+
+    .active-tab {
+      border-bottom-color: #fff;
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 20px;
+      min-height: 50vh;
+    }
+
+    section {
+      display: none;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .resume-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-page">
+    <img class="profile-picture" src="assets/imgs/20210913_134442-modified.png" alt="Profile Picture">
+    <h1>Daanish Mohammed</h1>
+    <p><b>Actively looking for entry-level SWE/MLE/DS full-time roles</b></p>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active-tab" onclick="changeTab('about')">About Me</div>
+    <div class="tab" onclick="changeTab('education')">Education</div>
+    <div class="tab" onclick="changeTab('work-experience')">Work Experience</div>
+    <div class="tab" onclick="changeTab('projects')">Projects</div>
+    <div class="tab" onclick="changeTab('resume')">Resume</div>
+  </div>
+
+  <div class="content">
+    <section id="about" style="display: block;">
+      <h2>About Me</h2>
+      <p>I am an aspiring Software Engineer, who is specialized in Machine Learning. I recently graduated from Georgia Tech with a MS in Computer Science, while specializing in Machine Learning. As part of my specialization, I took a variety of courses in the ML/AI domain to broaden my knowledge of this field. At Georgia Tech, I worked as a Graduate Teaching Assistant for CS 4641/7641 Machine Learning and CSE 8813 Applied NLP courses, where I assisted the instructor with creating/grading programming assignments, and answering any questions (theoretical or programming-based) that students may have had. I also worked as a Data Science Intern for Georgia-Pacific LLC (a subsidiary of Koch Industries) over Summer 2022.</p>
+      <p>A summary of my technical expertise is given below:</p>
+      <p><b>Programming Languages: </b>Python, Java, MATLAB, SQL</p>
+      <p><b>Libraries & Frameworks: </b>PyTorch, TensorFlow, NetworkX, Ray Tune, OpenCV, sklearn, NumPy, Pandas, Matplotlib</p>
+      <p><b>Tools & Technologies: </b>Git, AWS (SageMaker, S3), Docker, Kubernetes, GCP, Tableau</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Georgia Institute of Technology</h3>
+        <p class="education-details"><b>Degree: </b>Master of Science in Computer Science</p>
+        <p class="education-details"><b>Year: </b>2021 - 2023</p>
+        <p class="education-details"><b>GPA: </b>3.9/4.0</p>
+        <ul>
+          <li>Specialization: Machine Learning</li>
+          <li>Worked as a TA for CS 4641/7641 Machine Learning and CSE 8813 Applied NLP</li>
+          <li><b>Coursework: </b>
+            <ul>
+              <li>Machine Learning (CS 7641)</li>
+              <li>Computer Vision (CS 6476)</li>
+              <li>Database Systems (CS 6400)</li>
+              <li>Natural Language (CS 7650)</li>
+              <li>Behavioral Imaging (CS 7626)</li>
+              <li>Statistical Machine Learning (ECE 6254)</li>
+              <li>Deep Learning (CS 7643)</li>
+              <li>Data Visualization (CS 6730)</li>
+              <li>Intro to Graduate Algorithms (CS 6515)</li>
+              <li>Web Search & Text Mining (CSE 6240)</li>
+              <li>Game AI (CS 7632)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>BITS Pilani, Hyderabad</h3>
+        <p class="education-details"><b>Degree: </b>Bachelor of Engineering in Electronics & Communications Engineering</p>
+        <p class="education-details"><b>Year: </b>2016 - 2020</p>
+        <p class="education-details"><b>GPA: </b>8.2/10.0</p>
+        <ul>
+          <li>Focus on Signal Processing and Machine Learning</li>
+          <li>Worked as an Electrical Engineering Intern at HBL Power Systems during PS1, a program meant to deliver industry experience to sophomores through internships</li>
+          <li>Worked as an Undergraduate Researcher, and completed a Thesis on "Detection of heart valve disorders from PCG signals" using Signal Processing and Deep Learning techniques.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <div class="experience-item">
+        <h3>Data Science Intern</h3>
+        <p class="experience-details"><b>Company: </b>Georgia-Pacific LLC</p>
+        <p class="experience-details"><b>Duration: </b>May 2022 - August 2022</p>
+        <p class="experience-details"><b>Location: </b>Atlanta, GA</p>
+        <ul>
+          <li>I worked on implementing a License Plate Reader using Computer Vision Algorithms. I implemented the following tasks:
+            <ol>
+              <li>Annotating a dataset of images of trucks.</li>
+              <li>Training a YOLOv5 model on the truck dataset and using the predicted bounding box to extract license plates via cropping.</li>
+              <li>Perform a homography on the cropped license plates and run Optical Character Recognition (OCR) on it to extract the text.
+</li>
+            </ol>
+          </li>
+          <li>I performed a few latency testing experiments to determine what the major source of latency was in the Human Detection application</li>
+          <li><b>Skills: </b>
+            <ul>
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>AWS</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Graduate Teaching Assistant</h3>
+        <p class="experience-details"><b>Company: </b>Georgia Institute of Technology</p>
+        <p class="experience-details"><b>Duration: </b>January 2022 - May 2023</p>
+        <p class="experience-details"><b>Location: </b>Atlanta, GA</p>
+        <ul>
+          <li>(Jan 2022 - December 2022) I worked as a Teaching Assistant for CS 4641/7641 Machine Learning, taught by Dr. Mahdi Roozbahani. </li>
+          <li>(Jan 2023 - May 2023) I worked as a Teaching Assistant for CSE 8813 Applied Natural Language Processing, also taught by Dr. Mahdi Roozbahani. </li>
+          <li>My responsibilities as a TA included:
+            <ul>
+              <li>creating and grading homework assignments</li>
+              <li>solving conceptual and programming doubts on EdStem and during weekly one-to-one Office Hour sessions</li>
+              <li>holding project seminars for students to demonstrate examples of Machine Learning projects</li>
+            </ul>
+          </li>
+          <li><b>Skills: </b>
+            <ul>
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>sklearn</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Undergraduate Researcher</h3>
+        <p class="experience-details"><b>Company: </b>BITS Pilani, Hyderabad</p>
+        <p class="experience-details"><b>Duration: </b>August 2019 - December 2019</p>
+        <p class="experience-details"><b>Location: </b>Hyderabad, TS, India</p>
+        <ul>
+          <li>Worked under the guidance of Dr. Rajesh K Tripathy on Time-Frequency Domain Convolutional Neural Network based detection of heart valve disorders using PCG signals, as part of my Undergraduate Thesis</li>
+          <li>Pre-processed raw PCG audio data using various signal processing techniques to extract cardiac cycles.</li>
+          <li>Applied Smoothed-Pseudo Wigner-Ville Distribution (WVD) to the extracted cardiac cycles to generate Time-Frequency matrices.</li>
+          <li>Trained a CNN on the Time-Frequency matrices to classify PCG signals into 4 classes based on the heart valve disorder present. It achieved an accuracy of 84.37%.</li>
+          <li><b>Skills: </b>
+            <ul>
+              <li>Python</li>
+              <li>TensorFlow</li>
+              <li>MATLAB</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Electrical Engineering Intern</h3>
+        <p class="experience-details"><b>Company: </b>HBL Power Systems Ltd.</p>
+        <p class="experience-details"><b>Duration: </b>May 2018 - July 2018</p>
+        <p class="experience-details"><b>Location: </b>Shameerpet, TS, India</p>
+        <ul>
+          <li>Designed a semi-automatic Interlocking System for the Heat Sealing machine used in the Cell Sealing procedure at the Ni-Cd plant. It was designed in such a way that it turns off the Heat Sealing machine if the temperature of the heating component falls below a certain threshold (250 degrees Celsius).</li>
+          <li>Pre-processed raw PCG audio data using various signal processing techniques to extract cardiac cycles.</li>
+          <li>This project was completed under the Practice School (PS-I) program of the academic curriculum under the guidance of Mr. Sandeep (Head of HBL, Shameerpet) and Mr. Thrimurthulu (Supervisor of the NCSP plant).</li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <h3>Evaluation of GNN's for Graph Classification without Node Attributes</h3>
+      <h5>(Python · PyTorch · Ray Tune) <a href="https://github.com/dmo98/CSE-6240-Project"> GitHub Link</a></h5>
+        <ul>
+          <li>Trained several Graph Neural Network models, such as GCN, GAT and GraphSAGE, on the REDDIT-BINARY dataset
+to learn to distinguish and classify the interaction between users on a Reddit post based on the underlying graph
+structure into 2 categories: (i) Question/Answer-based subreddit posts and (ii) Discussion-based subreddit posts.</li>
+          <li>Evaluated the performance of these models on the Graph Classification task using accuracy and AUCROC score as
+metrics. We found that GraphSAGE (with ’add’ as the aggregation operation) achieved the best performance, with an
+accuracy of 76.7% and an AUCROC score of 0.840.</li>
+        </ul>
+
+      <h3>CarGen</h3>
+      <h5>(Python · TensorFlow · OpenCV) <a href="https://github.com/dmo98/car_generator"> GitHub Link</a></h5>
+        <ul>
+          <li>Built and trained VAE and DCGAN models on the Stanford Cars Dataset to generate synthetic images of cars.</li>
+          <li>Applied pre-processing steps such as cropping, resizing, and rescaling to prepare the image data for the models. Used
+latent vectors of size 512 and 100 for the VAE and DCGAN models respectively.</li>
+        </ul>
+
+      <h3>Pneumonia Detection from Chest X-Ray Images</h3>
+      <h5>(Python · TensorFlow · scikit-learn) <a href="https://omarahmed519.github.io/cs7641-project/"> GitHub Link</a></h5>
+        <ul>
+          <li>Built and trained a Deep CNN to classify Chest X-Ray images as ’Normal’ or ’Pneumonia’. Performed hyper-parameter
+optimization to obtain a model configuration with a train accuracy of 97.6%, and validation accuracy of 92.6%</li>
+          <li>Used Transfer Learning to fine-tune pre-trained AlexNet, VGG-16, and GoogLeNet networks on the data. Compared the
+performance of these networks using the validation accuracy, precision, recall, f1-score and false negative rate as the
+metrics.</li>
+        </ul>
+
+      <h3>Airport Management System</h3>
+      <h5>(Python · mysql-connector-python · Flask · flask-mysqldb) <a href="https://github.com/dmo98/Airport_Management_System"> GitHub Link</a></h5>
+        <ul>
+          <li>Created a Database application to demonstrate certain functionalities an Airport Manager would be in charge of.</li>
+          <li>Constructed an EER Diagram and mapped it to a Relational Schema. Created and populated the database. Designed a
+simple interface and had the backend access the database to run queries.</li>
+        </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <a class="resume-button" href="Daanish_Mohammed_Resume.pdf" download>Download Resume</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Daanish Mohammed</p>
+  </footer>
+
+  <script>
+    function changeTab(tabName) {
+      // Hide all sections
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+
+      // Remove active class from all tabs
+      var tabs = document.querySelectorAll('.tab');
+      tabs.forEach(function(tab) {
+        tab.classList.remove('active-tab');
+      });
+
+      // Show the selected section and mark the corresponding tab as active
+      document.getElementById(tabName).style.display = 'block';
+      document.querySelector('.' + tabName).classList.add('active-tab');
+    }
+  </script>
+</body>
+</html>
